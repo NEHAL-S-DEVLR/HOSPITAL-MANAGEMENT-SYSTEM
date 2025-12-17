@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | Help & Support Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for branding */
+        .brand-bg { background-color: #1a202c; } 
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+        .hover\:bg-teal-700:hover { background-color: #097268; }
+        /* Style for the answer content in the FAQ */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .faq-item[open] .faq-answer {
+            max-height: 500px; /* Large enough value for smooth transition */
+        }
+        .faq-item[open] svg {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="text-2xl font-bold brand-bg px-2 py-1 rounded text-white">MedNexus</a>
+            </div>
+            <a href="index.html" class="text-gray-600 hover:text-teal-600 font-medium">Back to Portal Login</a>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-extrabold text-gray-900 mb-3">How can we help you today?</h1>
+                <p class="text-xl text-gray-600 mb-6">Search our knowledge base or contact us directly.</p>
+                
+                <div class="relative max-w-2xl mx-auto">
+                    <input type="search" placeholder="Search for billing, appointments, or records..." 
+                           class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-full shadow-lg focus:outline-none focus:ring-teal-500 focus:border-teal-500 text-lg">
+                    <svg class="w-6 h-6 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 main-teal">Frequently Asked Questions</h2>
+                    
+                    <div class="space-y-4">
+                        
+                        <details class="bg-white p-6 rounded-lg shadow-md faq-item">
+                            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 focus:outline-none">
+                                How do I schedule a new appointment?
+                                <svg class="w-6 h-6 main-teal transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-answer pt-4 text-gray-600">
+                                <p>You can schedule an appointment by logging into the Patient Portal, navigating to the **Schedule** section, and selecting **+ New Appointment**. Follow the steps to choose your doctor, service type, and preferred time slot. Confirmation will be sent via email.</p>
+                            </div>
+                        </details>
+
+                        <details class="bg-white p-6 rounded-lg shadow-md faq-item">
+                            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 focus:outline-none">
+                                Where can I view and pay my hospital bill?
+                                <svg class="w-6 h-6 main-teal transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-answer pt-4 text-gray-600">
+                                <p>All your billing statements are available under the **Billing & Payments** tab in the MedNexus portal. You can view itemized statements, track insurance claims, and make secure payments using a credit card or bank transfer directly on that page.</p>
+                            </div>
+                        </details>
+
+                        <details class="bg-white p-6 rounded-lg shadow-md faq-item">
+                            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 focus:outline-none">
+                                I forgot my password. How do I reset it?
+                                <svg class="w-6 h-6 main-teal transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-answer pt-4 text-gray-600">
+                                <p>Click the **Forgot Password?** link on the login page. You will be prompted to enter your registered email address. A password reset link will be sent to your inbox. Be sure to check your spam folder if you don't receive it immediately.</p>
+                            </div>
+                        </details>
+
+                        <details class="bg-white p-6 rounded-lg shadow-md faq-item">
+                            <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 focus:outline-none">
+                                How soon can I see my lab results online?
+                                <svg class="w-6 h-6 main-teal transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-answer pt-4 text-gray-600">
+                                <p>Lab and imaging results are typically posted to your **Health Records** within 24–72 hours after they are reviewed and approved by your physician. You will receive an alert when new results are available.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1 space-y-6">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-600">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Contact Our Team</h3>
+                        <p class="text-gray-600 mb-4">For immediate assistance or technical issues, please contact us directly.</p>
+                        
+                        <ul class="space-y-3">
+                            <li>
+                                <p class="font-semibold text-gray-700">📞 Phone Support</p>
+                                <p class="main-teal font-medium text-lg">1-800-555-MEDNEXUS</p>
+                                <p class="text-sm text-gray-500">Available Monday - Friday, 8:00 AM - 5:00 PM</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold text-gray-700">📧 Email Support</p>
+                                <p class="text-gray-700">support@mednexus.org</p>
+                                <p class="text-sm text-gray-500">Response within 24 hours.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-800 text-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Urgent Medical Needs?</h3>
+                        <p class="text-gray-300 mb-4">**Do not use this portal for emergencies.**</p>
+                        <a href="tel:911" class="w-full bg-red-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-red-700 transition block text-center">
+                            Call Emergency Services
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="brand-bg py-8 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 MedNexus Hospital Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript to ensure details tags collapse smoothly (optional, but good UX)
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', (event) => {
+                const answer = detail.querySelector('.faq-answer');
+                if (detail.open) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = "0";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

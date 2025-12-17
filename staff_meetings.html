@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | Team Meetings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sidebar-bg { background-color: #1a202c; } 
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+        .hover\:bg-teal-700:hover { background-color: #097268; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <div class="w-64 sidebar-bg text-white flex flex-col flex-shrink-0">
+            <div class="p-4 flex items-center justify-center border-b border-gray-700">
+                <span class="text-2xl font-bold">MedNexus</span>
+            </div>
+            
+            <nav class="flex-grow p-4 space-y-2 overflow-y-auto">
+                <a href="staff.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg> Dashboard
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 15H3a2 2 0 00-2 2v2a2 2 0 002 2h12a2 2 0 002-2v-2a2 2 0 00-2-2zm-2-4a4 4 0 10-8 0 4 4 0 008 0z"></path></svg> Patient Management
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> Appointments
+                </a>
+                
+                <h3 class="text-xs text-gray-400 font-semibold uppercase mt-4 mb-2 px-3">Team & Finance</h3>
+                
+                <a href="staff_meetings.html" class="flex items-center p-3 rounded-lg bg-teal-600 text-white font-semibold transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> Team Meetings
+                </a>
+
+                <a href="staff_work.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg> Work Assignments
+                </a>
+                <a href="staff_hikes.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> Salary Hikes (HR)
+                </a>
+                <a href="staff_deposits.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg> Salary Deposits (Payroll)
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-gray-700">
+                <div class="flex items-center space-x-3">
+                    <img class="h-10 w-10 rounded-full bg-gray-600" src="" alt="Staff Avatar">
+                    <div>
+                        <p class="text-sm font-semibold">Sarah Bennett</p>
+                        <a href="role_selection_buttons.html" class="text-xs text-gray-400 hover:text-teal-400">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto">
+            
+            <header class="sticky top-0 bg-white shadow z-10 p-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-900">Team Meetings</h1>
+                <button class="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <span>Schedule New</span>
+                </button>
+            </header>
+
+            <main class="p-6">
+                <div class="bg-white p-6 rounded-xl shadow space-y-4">
+                    <h2 class="text-xl font-semibold border-b pb-2">Upcoming Meetings</h2>
+                    
+                    <div class="flex items-center justify-between p-4 border rounded-lg bg-teal-50">
+                        <div class="flex space-x-4">
+                            <div class="text-center">
+                                <span class="text-xl font-bold block main-teal">17</span>
+                                <span class="text-xs text-gray-500 block">DEC</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Weekly Operations Review <span class="text-gray-500 font-normal">10:00 AM - 11:00 AM</span></p>
+                                <p class="text-sm text-gray-600">Attendees: All Department Heads</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm main-teal hover:underline">View Agenda</a>
+                    </div>
+                    
+                    <div class="flex items-center justify-between p-4 border rounded-lg">
+                        <div class="flex space-x-4">
+                            <div class="text-center">
+                                <span class="text-xl font-bold block main-teal">20</span>
+                                <span class="text-xs text-gray-500 block">DEC</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Q4 Budget Planning <span class="text-gray-500 font-normal">2:00 PM - 3:30 PM</span></p>
+                                <p class="text-sm text-gray-600">Attendees: Finance, HR, Admin Lead</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm main-teal hover:underline">Draft Minutes</a>
+                    </div>
+
+                    <h2 class="text-xl font-semibold border-b pb-2 pt-6">Past Meetings</h2>
+                    
+                    <div class="flex items-center justify-between p-4 border rounded-lg opacity-70">
+                        <div class="flex space-x-4">
+                            <div class="text-center">
+                                <span class="text-xl font-bold block text-gray-400">10</span>
+                                <span class="text-xs text-gray-500 block">DEC</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">New EHR Training Session</p>
+                                <p class="text-sm text-gray-600">Notes: Training completed. Action items filed.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm text-gray-500 hover:underline">View Minutes</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
