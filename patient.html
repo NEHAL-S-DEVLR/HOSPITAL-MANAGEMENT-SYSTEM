@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | Patient Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom colors matching the MedNexus theme */
+        .sidebar-bg { background-color: #1a202c; } 
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+        .hover\:bg-teal-700:hover { background-color: #097268; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <div class="w-64 sidebar-bg text-white flex flex-col flex-shrink-0">
+            <div class="p-4 flex items-center justify-center border-b border-gray-700">
+                <span class="text-2xl font-bold">MedNexus</span>
+            </div>
+            
+            <nav class="flex-grow p-4 space-y-2 overflow-y-auto">
+                <a href="patient.html" class="flex items-center p-3 rounded-lg bg-teal-600 text-white font-semibold transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    Dashboard
+                </a>
+
+                <a href="patient_appointments.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    My Appointments
+                </a>
+
+                <a href="patient_book.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    Book Appointment
+                </a>
+                
+                <h3 class="text-xs text-gray-400 font-semibold uppercase mt-4 mb-2 px-3">My Health</h3>
+
+                <a href="patient_medicines.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m4 14l7-7-7-7"></path></svg>
+                    My Medicines
+                </a>
+
+                <a href="patient_tracker.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6"></path></svg>
+                    Health Tracker
+                </a>
+
+                <a href="billing.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m0-6V9m10 3a2 2 0 012 2v4a2 2 0 01-2 2h-6a2 2 0 01-2-2v-4a2 2 0 012-2h6z"></path></svg>
+                    Billing
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-gray-700">
+                <div class="flex items-center space-x-3">
+                    <img class="h-10 w-10 rounded-full bg-gray-600" src="" alt="Patient Avatar">
+                    <div>
+                        <p class="text-sm font-semibold">Alex Johnson</p>
+                        <a href="index.html" class="text-xs text-gray-400 hover:text-teal-400">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto">
+            
+            <header class="sticky top-0 bg-white shadow z-10 p-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-900">Welcome, Alex Johnson!</h1>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-500">PCP: Dr. Alex Sharma</span>
+                </div>
+            </header>
+
+            <main class="p-6 space-y-6">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <a href="patient_appointments.html" class="bg-white p-6 rounded-xl shadow flex flex-col justify-between border-b-4 border-blue-600 hover:shadow-lg transition">
+                        <div>
+                            <p class="text-sm font-medium text-gray-500">Next Appointment</p>
+                            <p class="text-2xl font-bold text-gray-900 mt-1">Dec 28, 9:30 AM</p>
+                        </div>
+                        <p class="text-sm text-blue-600 mt-3">With Dr. Alex Sharma</p>
+                    </a>
+
+                    <a href="patient_book.html" class="bg-white p-6 rounded-xl shadow flex flex-col justify-center items-center border-b-4 border-teal-600 hover:bg-teal-50 transition">
+                        <svg class="w-8 h-8 main-teal mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        <p class="text-lg font-bold main-teal">Book New Visit</p>
+                    </a>
+
+                    <a href="patient_medicines.html" class="bg-white p-6 rounded-xl shadow flex flex-col justify-center items-center border-b-4 border-red-600 hover:bg-red-50 transition">
+                         <svg class="w-8 h-8 text-red-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m4 14l7-7-7-7"></path></svg>
+                        <p class="text-lg font-bold text-red-600">Request Refill</p>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex justify-between items-center">
+                            Health Summary & Latest Vitals
+                            <a href="patient_tracker.html" class="text-sm main-teal hover:text-teal-700">Go to Tracker</a>
+                        </h3>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center border-b pb-4 mb-4">
+                            <div class="bg-gray-100 p-3 rounded-lg">
+                                <p class="text-xs text-gray-500">BP (Last)</p>
+                                <p class="font-bold text-lg text-gray-900">120/80</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded-lg">
+                                <p class="text-xs text-gray-500">Weight (Last)</p>
+                                <p class="font-bold text-lg text-gray-900">185 lbs</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded-lg">
+                                <p class="text-xs text-gray-500">Allergies</p>
+                                <p class="font-bold text-lg text-red-600">Penicillin</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded-lg">
+                                <p class="text-xs text-gray-500">PCP</p>
+                                <p class="font-bold text-lg text-gray-900">Dr. Sharma</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Recent Activity Feed</h3>
+                        <ul class="space-y-3">
+                            <li class="border-l-4 border-teal-500 p-3 bg-teal-50 rounded">
+                                <p class="text-sm font-medium text-gray-900">New Lab Results Available (Dec 15)</p>
+                                <a href="#" class="text-xs main-teal hover:underline">View Details</a>
+                            </li>
+                            <li class="border-l-4 border-blue-500 p-3 bg-blue-50 rounded">
+                                <p class="text-sm font-medium text-gray-900">Encounter Note from Dr. Sharma (Dec 14)</p>
+                            </li>
+                            <li class="border-l-4 border-yellow-500 p-3 bg-yellow-50 rounded">
+                                <p class="text-sm font-medium text-gray-900">Appointment Reminder: Dec 28, 9:30 AM</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                    <div class="lg:col-span-1 bg-white p-6 rounded-xl shadow h-fit">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Secure Contact</h3>
+                        <div class="space-y-3">
+                            <p class="text-sm text-gray-600">Send a non-urgent message directly to your care team.</p>
+                            <button class="w-full bg-teal-600 text-white py-3 rounded-lg font-bold hover:bg-teal-700 transition">
+                                <span class="flex items-center justify-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg> Message Care Team</span>
+                            </button>
+                            <div class="border-t pt-3 mt-3 text-center">
+                                <p class="text-xs text-gray-500">For emergencies, call 911 immediately.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

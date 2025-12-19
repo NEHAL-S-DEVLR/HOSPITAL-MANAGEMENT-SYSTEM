@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .brand-bg { background-color: #1a202c; } 
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+        .hover\:bg-teal-700:hover { background-color: #097268; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold brand-bg px-2 py-1 rounded text-white">MedNexus</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="features.html" class="text-gray-600 hover:text-teal-600 font-medium">Features</a>
+                    <a href="pricing.html" class="main-teal font-bold border-b-2 border-teal-600">Pricing</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-teal-600 font-medium">Contact</a>
+                    <a href="login.html" class="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition shadow-md">
+                        User Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Affordable Solutions for Every Clinic</h2>
+                <p class="text-xl text-gray-600">Choose the plan that fits your healthcare facility's size and needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="bg-white rounded-xl shadow-xl p-8 flex flex-col border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                    <p class="text-gray-500 mb-6">Ideal for small clinics and specialty centers.</p>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-5xl font-extrabold text-gray-900">$99</span>
+                        <span class="text-gray-500 font-medium">/ month</span>
+                    </div>
+
+                    <ul class="space-y-3 flex-grow mb-8 text-gray-700">
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Up to 5 Doctors</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Basic Patient Records</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Appointment Scheduling</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Standard Reporting</span></li>
+                        <li class="flex items-center space-x-2"><span class="text-gray-400">✖</span> <span>Pharmacy & Inventory Mgt.</span></li>
+                        <li class="flex items-center space-x-2"><span class="text-gray-400">✖</span> <span>AI Clinical Support</span></li>
+                    </ul>
+                    
+                    <button class="w-full py-3 mt-auto border-2 border-teal-600 main-teal rounded-lg font-semibold hover:bg-teal-50 transition">
+                        Select Starter
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-2xl p-8 flex flex-col border-4 border-teal-600 relative">
+                    <span class="absolute top-0 right-0 -mt-4 -mr-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+                    
+                    <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                    <p class="text-gray-500 mb-6">Perfect for mid-sized hospitals and large clinics.</p>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-5xl font-extrabold text-gray-900">$299</span>
+                        <span class="text-gray-500 font-medium">/ month</span>
+                    </div>
+
+                    <ul class="space-y-3 flex-grow mb-8 text-gray-700">
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Up to 30 Doctors</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Full Patient EMR</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Advanced Scheduling & Billing</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Detailed Reporting & Analytics</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Pharmacy & Inventory Mgt.</span></li>
+                        <li class="flex items-center space-x-2"><span class="text-gray-400">✖</span> <span>AI Clinical Support</span></li>
+                    </ul>
+                    
+                    <button class="w-full py-3 mt-auto bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition shadow-md">
+                        Start 30-Day Free Trial
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl p-8 flex flex-col border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                    <p class="text-gray-500 mb-6">Designed for multi-location hospital networks.</p>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-5xl font-extrabold text-gray-900">Custom</span>
+                        <span class="text-gray-500 font-medium">/ quote</span>
+                    </div>
+
+                    <ul class="space-y-3 flex-grow mb-8 text-gray-700">
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Unlimited Doctors/Staff</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Full Patient EMR</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Multi-Site Management</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Custom Reporting</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>Pharmacy & Inventory Mgt.</span></li>
+                        <li class="flex items-center space-x-2"><span class="main-teal">✔</span> <span>AI Clinical Support</span></li>
+                    </ul>
+                    
+                    <button class="w-full py-3 mt-auto border-2 border-gray-400 text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Contact Sales
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

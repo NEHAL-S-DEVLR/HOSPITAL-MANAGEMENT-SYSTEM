@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | Doctor's Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom colors based on the design */
+        .sidebar-bg { background-color: #1a202c; } /* Dark navy/charcoal */
+        .active-link-bg { background-color: #0d9488; } /* Teal/Cyan */
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+        .hover\:bg-teal-700:hover { background-color: #097268; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+        <aside class="w-64 sidebar-bg text-white flex flex-col fixed h-full">
+            <div class="p-4 flex items-center border-b border-gray-700">
+                <img src="https://via.placeholder.com/40" alt="Dr. Sarah Bennett" class="rounded-full mr-3">
+                <div>
+                    <p class="font-semibold text-sm">Dr. Sarah Bennett</p>
+                    <p class="text-xs text-gray-400">Cardiology</p>
+                </div>
+            </div>
+
+            <nav class="flex-grow p-4 space-y-2">
+                <a href="#" class="flex items-center p-3 rounded-lg active-link-bg">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-8v8m-4-8v8m9-15H7a4 4 0 00-4 4v12a4 4 0 004 4h10a4 4 0 004-4V7a4 4 0 00-4-4z"></path></svg>
+                    Dashboard
+                </a>
+                <a href="myappointments.html" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    My Appointments
+                </a>
+                <a href="mypatients.html" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    My Patients
+                </a>
+                 <a href="pharmacy.html" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">Hospital Pharmacy</a>
+            </nav>
+
+            <div class="p-4 border-t border-gray-700">
+                <a href="welcomeback.html" class="flex items-center p-3 rounded-lg text-red-400 hover:bg-gray-700 transition space-x-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3v-3m0-10V4a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-grow ml-64 p-6">
+            <header class="bg-white p-4 rounded-lg shadow mb-6 flex justify-between items-center sticky top-0 z-10">
+                <h1 class="text-xl font-bold text-gray-800">Doctor's Patient Manager</h1>
+                <a href="help.html" class="text-sm main-teal hover:underline font-medium">Need Help?</a>
+            </header>
+
+            <div class="grid grid-cols-3 gap-6">
+
+                <section class="col-span-2">
+                    <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                        <div class="flex justify-between items-center mb-4 border-b pb-3">
+                            <h2 class="text-xl font-semibold text-gray-800">Today's Schedule & Appointments</h2>
+                            <button class="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition flex items-center space-x-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                                <span>New Appointment</span>
+                            </button>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex space-x-4 border-b mb-4">
+                                <a href="#" class="font-medium pb-2 main-teal border-b-2 border-teal-600">Scheduled (2)</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-800 pb-2">Completed (5)</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-800 pb-2">Cancelled (0)</a>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border">
+                                <div class="flex items-center space-x-4">
+                                    <div class="text-center">
+                                        <span class="text-lg font-bold block main-teal">09:00</span>
+                                        <span class="text-xs text-gray-500 block">AM</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-gray-900">John Doe (Checkup)</p>
+                                        <p class="text-sm text-gray-600">Regular BP checkup | 45 yrs, Male</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">Scheduled</span>
+                                    <button class="text-teal-600 hover:text-teal-800" title="View Details">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border">
+                                <div class="flex items-center space-x-4">
+                                    <div class="text-center">
+                                        <span class="text-lg font-bold block main-teal">10:30</span>
+                                        <span class="text-xs text-gray-500 block">AM</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-gray-900">Emily Smith (Consultation)</p>
+                                        <p class="text-sm text-gray-600">Pregnancy query | 28 yrs, Female</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">Scheduled</span>
+                                    <button class="text-teal-600 hover:text-teal-800" title="View Details">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h2 class="text-xl font-semibold mb-4 text-gray-800">My Recent Patients</h2>
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Patient Name</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Condition</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Visit</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">John Doe, 45M</td>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">Hypertension</td>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">2023-10-25</td>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="main-teal hover:underline text-sm">Prescribe</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Michael Brown, 62M</td>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">Diabetes T2</td>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">2023-10-20</td>
+                                    <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="main-teal hover:underline text-sm">Prescribe</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="col-span-1">
+                    <div class="bg-white p-6 rounded-xl shadow-md sticky top-24">
+                        <h2 class="text-xl font-semibold mb-4 text-gray-800">Medication Prescription</h2>
+                        <div class="mb-4 p-3 bg-red-50 border-l-4 border-red-500 text-red-700 rounded-md text-sm">
+                            <p class="font-medium">Selected Patient: None</p>
+                            <p>Select a patient from the lists to manage their medications.</p>
+                        </div>
+
+                        <form class="space-y-4">
+                            <div>
+                                <label for="patient-select" class="block text-sm font-medium text-gray-700">Select Patient</label>
+                                <select id="patient-select" name="patient-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md">
+                                    <option>Select...</option>
+                                    <option>John Doe (Hypertension)</option>
+                                    <option>Emily Smith (Pregnancy)</option>
+                                    <option>Michael Brown (Diabetes T2)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="medication" class="block text-sm font-medium text-gray-700">Medication</label>
+                                <input type="text" id="medication" name="medication" placeholder="e.g., Lisinopril 10mg" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity / Dose</label>
+                                    <input type="number" id="quantity" name="quantity" placeholder="e.g., 30 tabs" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500">
+                                </div>
+                                <div>
+                                    <label for="frequency" class="block text-sm font-medium text-gray-700">Frequency</label>
+                                    <input type="text" id="frequency" name="frequency" placeholder="e.g., Once daily" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="notes" class="block text-sm font-medium text-gray-700">Instructions/Notes</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Take with food. Refill in 30 days." class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-teal-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+                                Send Prescription to Pharmacy
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

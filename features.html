@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | Features & Benefits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles defined by the user */
+        .brand-bg { background-color: #1a202c; } /* Dark background for brand elements */
+        .main-teal { color: #0d9488; } /* Main Teal color for accents */
+        .bg-teal-600 { background-color: #0d9488; }
+        .hover\:bg-teal-700:hover { background-color: #097268; }
+
+        /* General enhancements */
+        .feature-list-item {
+            /* Styles for the main feature list items */
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            transition: all 0.2s ease-in-out;
+        }
+        .feature-list-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold brand-bg px-2 py-1 rounded text-white">MedNexus</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="features.html" class="main-teal font-bold border-b-2 border-teal-600">Features</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-teal-600 font-medium">Pricing</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-teal-600 font-medium">Contact</a>
+                    
+                    <a href="login.html" class="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition shadow-md">
+                        User Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-16 bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-3">MedNexus: Built for Everyone</h1>
+            <p class="text-xl text-gray-600">Discover the benefits and streamlined experience for both staff and patients.</p>
+        </div>
+    </header>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 main-teal">For Doctors & Hospital Staff</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    MedNexus provides powerful tools to enhance clinical workflow, reduce administrative burden, and focus more on patient care.
+                </p>
+
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl main-teal font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Integrated Patient EMR (Electronic Medical Records)</p>
+                            <p class="text-sm">Access complete patient history, test results, and notes instantly from a single, secure dashboard.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl main-teal font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Digital Prescription & Pharmacy Link</p>
+                            <p class="text-sm">Quickly prescribe medications and send orders directly to the hospital pharmacy to eliminate paperwork and errors.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl main-teal font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Optimized Appointment Calendar</p>
+                            <p class="text-sm">Manage meetings, view daily schedules, and reschedule appointments with intuitive drag-and-drop functionality.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl main-teal font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Staff Collaboration Tools</p>
+                            <p class="text-sm">Secure messaging and task assignment features to coordinate care with nurses and other specialists.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl main-teal font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Automated Billing & Insurance Processing</p>
+                            <p class="text-sm">Streamline claims submission, track payment statuses, and generate compliant patient billing statements automatically.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 sticky top-24 h-fit">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">How a Doctor/Staff Member Logs In:</h3>
+                <ol class="space-y-4 text-gray-700 list-decimal list-inside">
+                    <li>Navigate to the MedNexus Portal.</li>
+                    <li>Click the User Login button on the top right or scroll to the access form.</li>
+                    <li>In the login form:
+                        <ul class="list-disc list-inside ml-5 mt-2 space-y-1">
+                            <li>Select your role Doctor/Physician, Nurse/Staff, or Administrator.</li>
+                            <li>Enter your unique User ID or Hospital Email Address.</li>
+                            <li>Enter your secure Password.</li>
+                        </ul>
+                    </li>
+                    <li>Click Secure Sign In to access your dedicated dashboard .</li>
+                </ol>
+                <div class="mt-6 text-center">
+                    <a href="index.html#login-section" class="bg-teal-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-teal-700 transition">Go to Login Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <div class="bg-gray-100 p-8 rounded-xl shadow-lg border border-gray-200 order-last lg:order-first sticky top-24 h-fit">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">How a Patient Logs In:</h3>
+                <ol class="space-y-4 text-gray-700 list-decimal list-inside">
+                    <li>Navigate to the MedNexus Patient Portal (usually a sub-link on the main hospital website).</li>
+                    <li>The system will direct you to the Patient Login form.</li>
+                    <li>You will be asked to verify your identity using one of two methods:
+                        <ul class="list-disc list-inside ml-5 mt-2 space-y-1">
+                            <li>Method 1  Enter your verified Email Address and a unique Temporary Password provided during your first visit registration.</li>
+                            <li>Method 2: Enter your Patient ID and Date of Birth for verification.</li>
+                        </ul>
+                    </li>
+                    <li>Upon successful login, you access your personal health record.</li>
+                </ol>
+                <div class="mt-6 p-4 bg-teal-50 border-l-4 border-teal-600 text-teal-800 rounded">
+                    <p class="font-medium">Note: Patient login is typically managed via a separate, secure subdomain for compliance and privacy reasons.</p>
+                </div>
+            </div>
+
+            <div class="order-first lg:order-last">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-purple-600">For Patients & Families</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Patients gain control and clarity over their healthcare journey with easy access to records and services.
+                </p>
+
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl text-purple-600 font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Online Appointment Booking & Reminders</p>
+                            <p class="text-sm">Book, manage, and receive automated SMS/Email reminders for all upcoming appointments.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl text-purple-600 font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Secure Access to Health Data</p>
+                            <p class="text-sm">View test results, discharge papers, and medication lists as soon as they are approved by your doctor.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl text-purple-600 font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Prescription Refill Requests</p>
+                            <p class="text-sm">Initiate requests for medication refills directly through the portal, speeding up the pharmacy process.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl text-purple-600 font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Simplified Communication</p>
+                            <p class="text-sm">Send secure, non-urgent messages directly to your care team when needed.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3 feature-list-item">
+                        <span class="text-2xl text-purple-600 font-bold leading-none">✓</span>
+                        <div>
+                            <p class="font-semibold text-lg">Direct Bill Pay & Insurance Tracking</p>
+                            <p class="text-sm">Review your billing history, understand your insurance coverage, and pay outstanding balances securely online.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="brand-bg py-12 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 MedNexus Hospital Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

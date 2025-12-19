@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Billing Statement - MediCare General Hospital</title>
+    <style>
+        /* General Reset and Font */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        /* Invoice Container */
+        .billing-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header and Hospital Info */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #007bff;
+            font-size: 24px;
+        }
+
+        .hospital-info p {
+            margin: 0;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        /* Patient and Summary Tables */
+        .patient-info, .summary-table, .detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        .patient-info th, .patient-info td {
+            text-align: left;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        /* Summary Table Styling */
+        .summary-table th, .summary-table td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .summary-table th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+            width: 50%;
+        }
+
+        /* Detailed Charges Table */
+        .detail-table th, .detail-table td {
+            border: 1px solid #ddd;
+            padding: 12px 10px;
+            text-align: left;
+            font-size: 13px;
+        }
+        .detail-table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: normal;
+        }
+        .detail-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Footer and Payment */
+        .final-total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .final-total .due-amount {
+            color: #d9534f; /* Red for due amount */
+            font-size: 24px;
+        }
+
+        .payment-info {
+            border-top: 2px solid #eee;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        .payment-info h2 {
+            color: #333;
+            font-size: 20px;
+        }
+        .payment-info p {
+            line-height: 1.6;
+        }
+        
+        /* Utility Classes */
+        .section-title {
+            color: #007bff;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="billing-container">
+    
+    <div class="header">
+        <h1>Patient Billing Statement</h1>
+        <div class="hospital-info">
+            <p><strong>MediCare General Hospital</strong></p>
+            <p>123 Health Ave, Anytown, USA 10001</p>
+            <p>Billing Date: December 15, 2025</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Patient & Account Details</h2>
+    <table class="patient-info">
+        <tr>
+            <th>Patient Name:</th>
+            <td>Alex P. Smith</td>
+            <th>Account Number:</th>
+            <td>2025-12-0042</td>
+        </tr>
+        <tr>
+            <th>Insurance Provider:</th>
+            <td>HealthFirst Blue</td>
+            <th>Policy/Group No.:</th>
+            <td>HFB-567890</td>
+        </tr>
+        <tr>
+            <th>Date(s) of Service:</th>
+            <td>Dec 10, 2024 - Dec 12, 2024</td>
+            <th>Payment Due Date:</th>
+            <td>**January 14, 2026**</td>
+        </tr>
+    </table>
+
+    <h2 class="section-title">Summary of Charges</h2>
+    <table class="summary-table">
+        <tr>
+            <th>Total Billed Charges</th>
+            <td>$3,380.00</td>
+        </tr>
+        <tr>
+            <th>Less: Insurance Payments/Adjustments</th>
+            <td>-$2,535.00</td>
+        </tr>
+        <tr>
+            <th>Less: Patient Payment (Prior)</th>
+            <td>-$100.00</td>
+        </tr>
+    </table>
+    
+    <div class="final-total">
+        <span>TOTAL AMOUNT DUE:</span>
+        <span class="due-amount">$745.00</span>
+    </div>
+
+    <h2 class="section-title">Detailed Itemized Services (Date Range: 12/10/24 - 12/12/24)</h2>
+    <table class="detail-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Service Description</th>
+                <th>CPT Code</th>
+                <th>Total Charge</th>
+                <th>Insurance Paid</th>
+                <th>Patient Due</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12/10/24</td>
+                <td>Initial Consultation (Emergency)</td>
+                <td>99285</td>
+                <td>$350.00</td>
+                <td>$280.00</td>
+                <td>$70.00</td>
+            </tr>
+            <tr>
+                <td>12/10/24</td>
+                <td>Comprehensive Metabolic Panel</td>
+                <td>80053</td>
+                <td>$120.00</td>
+                <td>$100.00</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>12/10/24</td>
+                <td>X-Ray, Chest (2 Views)</td>
+                <td>71045</td>
+                <td>$150.00</td>
+                <td>$120.00</td>
+                <td>$30.00</td>
+            </tr>
+            <tr>
+                <td>12/10-12/24</td>
+                <td>Inpatient Room & Board (3 Days)</td>
+                <td>-</td>
+                <td>$2,400.00</td>
+                <td>$1,800.00</td>
+                <td>$600.00</td>
+            </tr>
+            <tr>
+                <td>12/11/24</td>
+                <td>Medication (IV Antibiotics)</td>
+                <td>J0153</td>
+                <td>$180.00</td>
+                <td>$100.00</td>
+                <td>$80.00</td>
+            </tr>
+            <tr>
+                <td>12/12/24</td>
+                <td>Discharge Planning/Summary</td>
+                <td>99238</td>
+                <td>$180.00</td>
+                <td>$100.00</td>
+                <td>$45.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="payment-info">
+        <h2>Payment Options & Contact</h2>
+        <ul>
+            <li>**Pay Online:** Visit **www.medicaregeneral.com/pay** and use Account Number **2025-12-0042**.</li>
+            <li>**Pay by Mail:** Make check payable to MediCare General Hospital and send to P.O. Box 7890, Anytown, USA 10002.</li>
+            <li>**Billing Questions:** Call (555) 123-4568 (M-F, 9:00 AM - 5:00 PM EST).</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

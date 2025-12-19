@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | My Medicines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sidebar-bg { background-color: #1a202c; } 
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+        .hover\:bg-teal-700:hover { background-color: #097268; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <div class="w-64 sidebar-bg text-white flex flex-col flex-shrink-0">
+            <div class="p-4 flex items-center justify-center border-b border-gray-700">
+                <span class="text-2xl font-bold">MedNexus</span>
+            </div>
+            
+            <nav class="flex-grow p-4 space-y-2 overflow-y-auto">
+                <a href="patient.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg> Dashboard
+                </a>
+                <a href="patient_appointments.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> My Appointments
+                </a>
+                <a href="patient_book.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg> Book Appointment
+                </a>
+                
+                <h3 class="text-xs text-gray-400 font-semibold uppercase mt-4 mb-2 px-3">My Health</h3>
+
+                <a href="patient_medicines.html" class="flex items-center p-3 rounded-lg bg-teal-600 text-white font-semibold transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m4 14l7-7-7-7"></path></svg> My Medicines
+                </a>
+                <a href="patient_tracker.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6"></path></svg> Health Tracker
+                </a>
+                <a href="billing.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m0-6V9m10 3a2 2 0 012 2v4a2 2 0 01-2 2h-6a2 2 0 01-2-2v-4a2 2 0 012-2h6z"></path></svg> Billing
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-gray-700">
+                <div class="flex items-center space-x-3">
+                    <img class="h-10 w-10 rounded-full bg-gray-600" src="" alt="Patient Avatar">
+                    <div>
+                        <p class="text-sm font-semibold">Alex Johnson</p>
+                        <a href="index.html" class="text-xs text-gray-400 hover:text-teal-400">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto">
+            
+            <header class="sticky top-0 bg-white shadow z-10 p-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-900">My Medications</h1>
+                <button class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700 transition flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.836 10H5.582m2.846-9.613l2.5-1.5m-2.5 1.5l2.5 1.5m0 0l-5 3m5-3V4m0 4h.01"></path></svg>
+                    <span>Request All Refills</span>
+                </button>
+            </header>
+
+            <main class="p-6">
+                <div class="bg-white p-6 rounded-xl shadow space-y-6">
+                    
+                    <h2 class="text-xl font-semibold border-b pb-3 main-teal">Current Prescriptions</h2>
+                    
+                    <div class="flex items-center justify-between p-4 border rounded-lg bg-teal-50 border-l-4 border-teal-500">
+                        <div>
+                            <p class="font-semibold text-gray-900 text-lg">Atorvastatin 10mg <span class="text-sm text-gray-500 font-normal">(Lipitor)</span></p>
+                            <p class="text-sm text-gray-600">Dosage: Take 1 tablet daily in the evening.</p>
+                            <p class="text-xs text-red-500 mt-1">Refills Remaining: 1</p>
+                        </div>
+                        <button class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700 transition">
+                            Request Refill
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-4 border rounded-lg border-l-4 border-blue-500">
+                        <div>
+                            <p class="font-semibold text-gray-900 text-lg">Amlodipine 5mg</p>
+                            <p class="text-sm text-gray-600">Dosage: Take 1 tablet daily in the morning.</p>
+                            <p class="text-xs text-green-600 mt-1">Refills Remaining: 4</p>
+                        </div>
+                        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
+                            Refill Available
+                        </button>
+                    </div>
+
+                    <h2 class="text-xl font-semibold border-b pb-3 pt-4 main-teal">Past Medications</h2>
+                    
+                    <div class="p-4 border rounded-lg opacity-70">
+                        <p class="font-semibold text-gray-900 text-lg">Amoxicillin 250mg</p>
+                        <p class="text-sm text-gray-600">Date Stopped: Aug 27, 2025</p>
+                        <p class="text-xs text-gray-400 mt-1">Note: Completed 7-day course for bacterial infection.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexus | Hospital Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom colors based on the design */
+        .sidebar-bg { background-color: #1a202c; } /* Dark navy/charcoal */
+        .active-link-bg { background-color: #0d9488; } /* Teal/Cyan */
+        .main-teal { color: #0d9488; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+        <aside class="w-64 sidebar-bg text-white flex flex-col fixed h-full">
+            <div class="p-4 flex items-center border-b border-gray-700">
+                <img src="https://via.placeholder.com/40" alt="Dr. Sarah Bennett" class="rounded-full mr-3">
+                <div>
+                    <p class="font-semibold text-sm">Dr. Sarah Bennett</p>
+                    <p class="text-xs text-gray-400">Admin</p>
+                </div>
+            </div>
+
+            <nav class="flex-grow p-4 space-y-2">
+                <a href="#" class="flex items-center p-3 rounded-lg active-link-bg">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-8v8m-4-8v8m9-15H7a4 4 0 00-4 4v12a4 4 0 004 4h10a4 4 0 004-4V7a4 4 0 00-4-4z"></path></svg>
+                    Dashboard
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    Patients
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.03 12.03 0 002 12c0 3.07 1.258 5.858 3.243 7.91A12.03 12.03 0 0012 22c3.07 0 5.858-1.258 7.91-3.243A12.03 12.03 0 0022 12c0-2.859-.49-5.642-1.382-8.016z"></path></svg>
+                    Doctors
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Appointments
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                    Pharmacy
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-75-3.25M4 4h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>
+                    AI Assistant
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-gray-700">
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition space-x-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317C10.655 4.108 11.05 4 11.5 4h.5a3 3 0 013 3v.5a3 3 0 01-3 3h-1.5a3 3 0 00-3 3v.5a3 3 0 003 3h.5c.45 0 .845-.108 1.175-.317l.875-.584M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg text-red-400 hover:bg-gray-700 transition space-x-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3v-3m0-10V4a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-grow ml-64 p-6">
+            <header class="bg-white p-4 rounded-lg shadow mb-6 flex justify-between items-center sticky top-0 z-10">
+                <div class="text-xl font-bold">MedNexus</div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search patients, doctors, medicines..." class="pl-10 pr-4 py-2 border rounded-lg w-96 focus:ring-2 focus:ring-teal-500">
+                        <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    
+                    <button class="p-2 rounded-full bg-gray-100 text-gray-600 hover:text-teal-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.405L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                    </button>
+                    <a href="#" class="text-sm main-teal hover:underline font-medium">Need Help?</a>
+                </div>
+            </header>
+
+            <section class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">Hospital Overview</h2>
+                    <div class="flex items-center space-x-4">
+                        <select class="p-2 border rounded-lg text-sm">
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                        </select>
+                        <button class="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span>Download Report</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="bg-white p-5 rounded-xl shadow-md flex justify-between items-center">
+                        <div>
+                            <p class="text-3xl font-bold">1,240</p>
+                            <p class="text-gray-500">Total Patients</p>
+                        </div>
+                        <div class="flex items-center text-green-500">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="text-sm">+12%</span>
+                        </div>
+                    </div>
+                    
+                    </div>
+            </section>
+
+            <div class="grid grid-cols-3 gap-6">
+                <section class="col-span-2 bg-white p-5 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800">Patient Activity</h3>
+                    <div class="h-64 flex justify-around items-end">
+                        <div class="w-8 bg-teal-600 h-2/3 rounded-t"></div>
+                        <div class="w-8 bg-gray-300 h-1/2 rounded-t"></div>
+                        <div class="w-8 bg-teal-600 h-3/4 rounded-t"></div>
+                        <div class="w-8 bg-gray-300 h-1/3 rounded-t"></div>
+                        <div class="w-8 bg-teal-600 h-2/3 rounded-t"></div>
+                        <div class="w-8 bg-gray-300 h-full rounded-t"></div>
+                        <div class="w-8 bg-teal-600 h-3/5 rounded-t"></div>
+                        <div class="w-8 bg-gray-300 h-4/5 rounded-t"></div>
+                    </div>
+                    <div class="flex justify-around text-xs text-gray-500 mt-2">
+                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                    </div>
+                </section>
+
+                <section class="col-span-1 bg-white p-5 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800">Upcoming Appointments</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b pb-3">
+                            <div class="flex space-x-3">
+                                <div class="text-center">
+                                    <span class="text-sm font-bold block main-teal">29</span>
+                                    <span class="text-xs text-gray-500 block">OCT</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium">John Doe</p>
+                                    <p class="text-xs text-gray-500">Checkup with Dr. Sarah Bennett</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium">09:00 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-3">
+                            <div class="flex space-x-3">
+                                <div class="text-center">
+                                    <span class="text-sm font-bold block main-teal">29</span>
+                                    <span class="text-xs text-gray-500 block">OCT</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Emily Smith</p>
+                                    <p class="text-xs text-gray-500">Consultation with Dr. Emily Stone</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium">10:30 AM</span>
+                        </div>
+                        </div>
+                    <a href="#" class="mt-4 block text-center main-teal text-sm font-medium hover:underline">View All Appointments</a>
+                </section>
+            </div>
+            
+            <section class="mt-8 bg-white p-5 rounded-xl shadow-md">
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Recent Patients</h3>
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Patient Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Condition</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">John Doe, 45 yrs • Male</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Hypertension</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Outpatient</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">555-0123</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Emily Smith, 28 yrs • Female</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pregnancy</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Admitted</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">555-0199</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
