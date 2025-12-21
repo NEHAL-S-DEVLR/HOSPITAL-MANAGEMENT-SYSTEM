@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal | MedNexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+    </style>
+</head>
+<body class="bg-blue-50 min-h-screen flex items-center justify-center font-sans">
+    <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg border border-blue-100">
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold main-teal">Patient Portal</h1>
+            <p class="text-gray-500 text-sm">View your records and appointments</p>
+        </div>
+
+        <form id="patientLoginForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Registered Email</label>
+                <input type="email" id="email" required class="mt-1 block w-full px-4 py-2 border rounded-lg focus:ring-teal-500" placeholder="patient@example.com">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" required class="mt-1 block w-full px-4 py-2 border rounded-lg focus:ring-teal-500" placeholder="••••••••">
+            </div>
+            <button type="submit" class="w-full bg-teal-600 text-white py-2 rounded-lg font-bold hover:bg-teal-700 transition">Secure Login</button>
+            <div class="text-center mt-4">
+                <a href="fp.html" class="text-sm text-teal-600 hover:underline">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('patientLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            
+            if(email.includes('@') && pass === "password123") {
+                window.location.href = "patient.html";
+            } else {
+                alert("Please use 'password123' to login for this demo.");
+            }
+        });
+    </script>
+</body>
+</html>

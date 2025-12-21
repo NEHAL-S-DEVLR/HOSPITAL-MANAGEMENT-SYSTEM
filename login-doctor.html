@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login | MedNexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .main-teal { color: #0d9488; }
+        .bg-teal-600 { background-color: #0d9488; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center font-sans">
+    <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+        <div class="text-center mb-6">
+            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Physician Access</span>
+            <h1 class="text-3xl font-bold main-teal mt-2">MedNexus Dr.</h1>
+        </div>
+
+        <form id="doctorLoginForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Medical ID / Email</label>
+                <input type="email" id="email" required class="mt-1 block w-full px-4 py-2 border rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="dr.smith@mednexus.com">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" required class="mt-1 block w-full px-4 py-2 border rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="••••••••">
+            </div>
+            <p id="errorMessage" class="text-red-500 text-xs hidden">Invalid credentials. Try: password123</p>
+            <button type="submit" class="w-full bg-teal-600 text-white py-2 rounded-lg font-bold hover:bg-teal-700 transition">Access EMR System</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('doctorLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            
+            if(email.includes('@') && pass === "password123") {
+                window.location.href = "doctor.html";
+            } else {
+                document.getElementById('errorMessage').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
