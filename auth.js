@@ -1,39 +1,45 @@
-/**
- * MedNexus Secure Authentication
- * This script ensures the user is "legit" before showing navigation options.
- */
+const getStoredUsers = () => {
+    const users = localStorage.getItem('mednexus_users');
+    return users ? JSON.parse(users) : {};
+};
+
+const registerUser = (email, password) => {
+    const users = getStoredUsers();
+    users[email.toLowerCase()] = password;
+    localStorage.setItem('mednexus_users', JSON.stringify(users));
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('loginForm');
-    const roleSelection = document.getElementById('roleSelection');
+    const loginForm = document.getElementById('loginForm') || 
+                      document.getElementById('staffForm') || 
+                      document.getElementById('doctorLoginForm') || 
+                      document.getElementById('patientLoginForm');
 
-    // Legit Credentials Database (Mock)
-    const VALID_CREDENTIALS = {
+    const DEFAULT_CREDENTIALS = {
         "admin@mednexus.com": "nexus2025",
         "doctor@mednexus.com": "care123",
-        "staff@mednexus.com": "staff99"
+        "staff@mednexus.com": "staff99",
+        "patient@example.com": "password123"
     };
 
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const email = document.getElementById('email').value.trim();
-            const password = document.getElementById('password').value;
+            const emailInput = document.getElementById('email').value.trim().toLowerCase();
+            const passwordInput = document.getElementById('password').value;
+            
+            const storedUsers = getStoredUsers();
+            const isValidStored = storedUsers[emailInput] === passwordInput;
+            const isValidDefault = DEFAULT_CREDENTIALS[emailInput] === passwordInput;
 
-            // Check if user exists and password matches
-            if (VALID_CREDENTIALS[email] && VALID_CREDENTIALS[email] === password) {
-                // SUCCESS
-                alert("Login Successful! Please select your role.");
-                
-                // Hide the login form and show the roles
-                loginForm.style.display = 'none';
-                roleSelection.classList.remove('hidden-roles');
-                
+            if (isValidStored || isValidDefault) {
+                if (loginForm.id === 'doctorLoginForm') window.location.href = "doctor.html";
+                else if (loginForm.id === 'patientLoginForm') window.location.href = "patient.html";
+                else if (loginForm.id === 'staffForm') window.location.href = "staff.html";
+                else window.location.href = "dashboard.html";
             } else {
-                // FAILURE
-                alert("Access Denied: Invalid User ID or Password.");
-                document.getElementById('password').value = ""; // Clear password for security
+                alert("Access Denied: Invalid credentials. If you are new, please Sign Up first.");
             }
         });
     }
