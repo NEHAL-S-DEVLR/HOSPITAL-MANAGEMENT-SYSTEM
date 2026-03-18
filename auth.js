@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			if (isValidStored || isValidDefault) {
 				if (loginForm.id === "doctorLoginForm")
-					window.location.href = "doctor.html";
+					window.location.href = "doctor/doctor.html";
 				else if (loginForm.id === "patientLoginForm")
 					window.location.href = "patient/patient.html";
 				else if (loginForm.id === "staffForm")
